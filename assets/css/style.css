@@ -1,0 +1,380 @@
+@font-face {
+  font-family: "andada";
+  src: url('assets/fonts/andada/Andada-Regular.woff2') format("woff2"),
+       url('assets/fonts/andada/Andada-Regular.ttf') format("truetype");
+       font-display: swap; 
+       font-weight: normal;
+       font-style: normal;
+}
+
+body {
+ /* background-color: #fcf5e5; */
+ background-color: whitesmoke;
+}
+
+header {
+  color:rgb(0, 0, 0);
+  text-align: left; 
+  font-family: 'Libre Baskerville, serif';
+  font-style: italic;
+  margin-bottom: 0;
+  margin-left: 288px;
+  font-size: 10px;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  margin-right: 1rem;
+  text-decoration: underline;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr; /* Aangepast naar vier kolommen */
+  gap: 0;
+}
+
+
+/* voor de telefoon */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 2fr; /* Eén kolom layout voor schermen kleiner dan 768px */
+  }
+  
+  header {
+    font-size: 20px;
+    margin: 1rem;
+  }
+
+  #left-column, #right-column {
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .tag {
+    font-size: 8px; /* Maak de font-grootte kleiner op mobiele apparaten */
+    padding: 2px; /* Verklein de padding voor mobiele apparaten */
+  }
+
+  .summary {
+    font-size: 12px; /* Maak de font-grootte kleiner op mobiele apparaten */
+  }
+
+  #left-column {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    font-family:  'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+    display: block; 
+    padding: 10px;
+  }
+
+  img { 
+    max-width: 100%; 
+    height: auto; 
+}
+}
+
+#left-column {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  font-family:  'Helvetica Neue', sans-serif;
+  font-weight: 800;
+  text-decoration: none;
+  display: block; 
+  padding: 10px;
+}
+
+#left-column ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#right-column {
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#right-column .indent {
+  display: block;
+  text-indent: 2em;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.tag {
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: transparent;
+  font-size: 12px;
+  /* color: rgb(124, 148, 16); */
+  border:#fa2222;
+  text-align: left;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block; 
+}
+
+.tag:hover {
+  background-color: rgb(208, 208, 208);
+}
+
+.tag.highlight {
+  background-color: rgb(223, 223, 69);
+}
+
+.column-content {
+  display: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.selected {
+  font-weight: bold;
+  background-color: rgb(208, 208, 208);
+}
+
+/* de kopjes in linkerkolom -- timeline of choosing, etc. */
+details > summary {
+  padding: 4px;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  list-style-type: none;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+details > p {
+  padding: 0px;
+  margin: 3px 0;
+}
+
+mark {
+  background-color: rgb(190, 190, 190);
+}
+
+/* linkjes in bibliografie */
+a {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(215, 184, 200);
+}
+
+.summary1 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(65, 87, 110);
+}
+
+.hoofdstuk_1 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(110, 65, 75);
+}
+
+#chapter1Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  font-size: 15px;
+  color:rgb(110, 65, 75);
+}
+
+/* HOOFDSTUK = koptitels van het begin van de tekst */
+.hoofdstuk_2 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(0, 0, 0);
+}
+
+#chapter2Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  font-size: 15px;
+  color:rgb(0, 0, 0);
+}
+
+/* A TIMELINE OF CHOOSING */
+.hoofdstuk_4 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(65, 87, 110);
+}
+
+#chapter4Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(65, 87, 110);
+}
+
+#chapter5Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(65, 87, 110);
+}
+
+#chapter6Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(65, 87, 110);
+}
+
+#chapter7Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(65, 87, 110);
+}
+
+#chapter8Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(65, 87, 110);
+}
+
+#chapter9Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(65, 87, 110);
+}
+
+/* BECOMING A MOTHER */
+.summary2 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(234, 33, 167);
+}
+
+.hoofdstuk_11 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(234, 33, 167);
+}
+
+.hoofdstuk_12 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(234, 33, 167);
+}
+
+.hoofdstuk_13 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(234, 33, 167);
+}
+
+#chapter11Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(234, 33, 167);
+}
+
+#chapter12Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(234, 33, 167);
+}
+
+#chapter13Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(234, 33, 167);
+}
+
+/* BEING A MOTHER */
+.summary3 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(1, 107, 42);
+}
+
+.hoofdstuk_15 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(1, 107, 42);
+}
+
+.hoofdstuk_16 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(1, 107, 42);
+}
+
+.hoofdstuk_17 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(1, 107, 42);
+}
+
+.hoofdstuk_18 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(1, 107, 42);
+}
+
+#chapter15Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(1, 107, 42);
+}
+
+#chapter16Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(1, 107, 42);
+}
+
+#chapter17Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(1, 107, 42);
+}
+
+#chapter18Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(1, 107, 42);
+}
+
+/* BIBLIOGRAPHY */
+/* .summary4 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(255, 0, 0);
+} */
+
+#chapter19Btn {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: bold; 
+  color:rgb(255, 0, 0);
+}
+
+.hoofdstuk_18 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color:rgb(255, 0, 0);
+}
+
+/* .footer-column {
+  text-align: left;
+} */
+
+/* footnotes */
+/* footer { */
+  /* position: fixed;
+  margin-top: 50px;
+  border-top: 1px solid silver;
+  font-size: 0.8em; */
+  /* grid-column: 4; Toegevoegd om de footer in de vierde kolom te plaatsen
+}
+
+footer ol {
+  padding-left: 5px;
+} */
